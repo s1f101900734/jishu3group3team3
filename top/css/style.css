@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+@import url(slide.css);
+@import url(lightbox.css);
+@media screen and (max-width: 2000px) {
+	body {
+		margin: 0px;
+		padding: 0px;
+		color: rgb(0, 0, 0);	/*全体の文字色*/
+		font-family: Yu Mincho;
+		font-size: 14px;	/*文字サイズ*/
+		line-height: 2;		/*行間*/
+		background: #FFF3DE;	/*全体の背景色（古いブラウザ用）*/
+		-webkit-text-size-adjust: none;
+	}
+	
+	h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,select,textarea {margin: 0px;padding: 0px;font-size: 100%;}
+	ul {list-style-type: none;}
+	img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+	table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+	video {max-width: 100%;}
+	iframe {width: 100%;}
+	
+	a {
+		color: rgb(61, 61, 61);		/*リンクテキストの色*/
+		transition: 0.4s;	/*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
+	}
+	#container {
+		max-width: 100%;	/*サイトの最大幅*/
+		margin: 0 auto;
+		padding: 0px;
+	}
+	
+	header {
+		height: 50px;	/*ヘッダーの高さ*/
+		position: relative;
+		background-color: #FFDDA1;
+		align-items: center;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ロゴ画像*/
+	header #logo img {
+		width: 146px;		/*画像の幅*/
+		position: absolute;z-index: 2;
+		left: 3%;		/*左から3%の場所に配置*/
+		top: 2px;		/*上から75pxの場所に配置*/
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ヘッダー右上の画像*/
+	#header-img img {
+		position: absolute;z-index: 1;
+		right: 3%;		/*右から3%の場所に配置*/
+		top: -30px;		/*上から-30pxの場所に配置。基準の場所から上に移動する事になります。*/
+		width: 500px;	/*画像の幅*/
+	}
+	
+	#contents {
+		clear: both;overflow: hidden;
+		padding-bottom: 9px;
+	}
+	
+	#main {
+		padding: 0 5%;
+	}
+	
+	#main h2 {
+		clear: both;
+		font-size: 16px;		/*文字サイズ*/
+		padding: 8px 30px;		/*上下、左右への余白*/
+		color: #333;			/*文字色*/
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: #FFF;		/*背景色（古いブラウザ用）*/
+		background: linear-gradient(#FFF, #e5e5e5);	/*背景グラデーション*/
+	}
+	
+	#main h3 {
+		clear: both;
+		margin-bottom: 20px;	/*見出しの下にとるスペース*/
+		font-size: 16px;		/*文字サイズ*/
+		padding: 10px 30px;		/*上下、左右への余白*/
+		color: #333;
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: rgb(251, 134, 0);		/*背景色（古いブラウザ用）*/
+			/*背景グラデーション*/
+	}
+	
+	/*他。微調整。*/
+	#main p + p {
+		margin-top: -5px;
+	}
+	#main h2 + p,
+	#main h3 + p,
+	#main h4 + p {
+		margin-top: -10px;
+	}
+	#main section + section {
+		margin-top: 30px;
+	}
+	
+	iframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.blocka {
+		float: left;
+		width: 60%;
+	}
+	
+	.blockb {
+		float: right;
+		width: 40%;
+	}
+	
+	.primary-nav .a .main-link-area {
+		grid-area: main-lnks;
+		display: flex;
+		height: 100%;
+	}
+	
+	.about {
+		font-size: 20px;
+		text-align: right;
+		align-items: center;
+		right: 5%;
+		padding: 20px 30px;
+		padding-top: 10px;
+		color: rgb(24, 24, 24);
+	}
+	
+	
+	/*------------------------------------*/
+	.box1 {
+		width: 92%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 5px;
+	}
+	
+	.main-content {
+		margin-right: auto;
+		margin-left: auto;
+		width: 86%;
+		height: auto;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	}
+	
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.container2 {
+		width: 25%;
+		height: 180px;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		margin-top: 22px;
+		margin-right: 30px;
+		margin-left: 30px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+		text-decoration: none;
+	}
+	.title {
+		text-align: center;
+		font-size: 25px;
+		margin-top: 2px;
+	}
+	
+	img.boxpic {
+		width: 205px;
+		height: 132px;
+		border-radius: 5px;
+	}
+}
+@media screen and (max-width: 992px) {
+	body {
+		margin: 0px;
+		padding: 0px;
+		color: rgb(0, 0, 0);	/*全体の文字色*/
+		font-family: Yu Mincho;
+		font-size: 14px;	/*文字サイズ*/
+		line-height: 2;		/*行間*/
+		background: #FFF3DE;	/*全体の背景色（古いブラウザ用）*/
+		-webkit-text-size-adjust: none;
+	}
+	
+	h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,select,textarea {margin: 0px;padding: 0px;font-size: 100%;}
+	ul {list-style-type: none;}
+	img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+	table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+	video {max-width: 100%;}
+	iframe {width: 100%;}
+	
+	a {
+		color: rgb(61, 61, 61);		/*リンクテキストの色*/
+		transition: 0.4s;	/*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
+	}
+	#container {
+		max-width: 100%;	/*サイトの最大幅*/
+		margin: 0 auto;
+		padding: 0px;
+	}
+	
+	header {
+		height: 50px;	/*ヘッダーの高さ*/
+		position: relative;
+		background-color: #FFDDA1;
+		align-items: center;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ロゴ画像*/
+	header #logo img {
+		width: 146px;		/*画像の幅*/
+		position: absolute;z-index: 2;
+		left: 3%;		/*左から3%の場所に配置*/
+		top: 2px;		/*上から75pxの場所に配置*/
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ヘッダー右上の画像*/
+	#header-img img {
+		position: absolute;z-index: 1;
+		right: 3%;		/*右から3%の場所に配置*/
+		top: -30px;		/*上から-30pxの場所に配置。基準の場所から上に移動する事になります。*/
+		width: 500px;	/*画像の幅*/
+	}
+	
+	#contents {
+		clear: both;overflow: hidden;
+		padding-bottom: 9px;
+	}
+	
+	#main {
+		padding: 0 5%;
+	}
+	
+	#main h2 {
+		clear: both;
+		font-size: 16px;		/*文字サイズ*/
+		padding: 8px 30px;		/*上下、左右への余白*/
+		color: #333;			/*文字色*/
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: #FFF;		/*背景色（古いブラウザ用）*/
+		background: linear-gradient(#FFF, #e5e5e5);	/*背景グラデーション*/
+	}
+	
+	#main h3 {
+		clear: both;
+		margin-bottom: 20px;	/*見出しの下にとるスペース*/
+		font-size: 16px;		/*文字サイズ*/
+		padding: 10px 30px;		/*上下、左右への余白*/
+		color: #333;
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: rgb(251, 134, 0);		/*背景色（古いブラウザ用）*/
+			/*背景グラデーション*/
+	}
+	
+	/*他。微調整。*/
+	#main p + p {
+		margin-top: -5px;
+	}
+	#main h2 + p,
+	#main h3 + p,
+	#main h4 + p {
+		margin-top: -10px;
+	}
+	#main section + section {
+		margin-top: 30px;
+	}
+	
+	iframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.blocka {
+		float: left;
+		width: 60%;
+	}
+	
+	.blockb {
+		float: right;
+		width: 40%;
+	}
+	
+	.primary-nav .a .main-link-area {
+		grid-area: main-lnks;
+		display: flex;
+		height: 100%;
+	}
+	
+	.about {
+		font-size: 20px;
+		text-align: right;
+		align-items: center;
+		right: 5%;
+		padding: 20px 30px;
+		padding-top: 10px;
+		color: rgb(24, 24, 24);
+	}
+	
+	
+	/*------------------------------------*/
+	.box1 {
+		width: 92%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 5px;
+	}
+	
+	.main-content {
+		margin-right: auto;
+		margin-left: auto;
+		width: 86%;
+		height: auto;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	}
+
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.container2 {
+		width: 25%;
+		height: 180px;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		margin-top: 22px;
+		margin-right: 30px;
+		margin-left: 30px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+		text-decoration: none;
+	}
+	.title {
+		text-align: center;
+		font-size: 25px;
+		margin-top: 2px;
+	}
+	
+	img.boxpic {
+		width: 205px;
+		height: 132px;
+		border-radius: 5px;
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		margin: 0px;
+		padding: 0px;
+		color: rgb(0, 0, 0);	/*全体の文字色*/
+		font-family: Yu Mincho;
+		font-size: 14px;	/*文字サイズ*/
+		line-height: 2;		/*行間*/
+		background: #FFF3DE;	/*全体の背景色（古いブラウザ用）*/
+		-webkit-text-size-adjust: none;
+	}
+	
+	h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,select,textarea {margin: 0px;padding: 0px;font-size: 100%;}
+	ul {list-style-type: none;}
+	img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+	table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+	video {max-width: 100%;}
+	iframe {width: 100%;}
+	
+	a {
+		color: rgb(61, 61, 61);		/*リンクテキストの色*/
+		transition: 0.4s;	/*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
+	}
+	#container {
+		max-width: 100%;	/*サイトの最大幅*/
+		margin: 0 auto;
+		padding: 0px;
+	}
+	
+	header {
+		height: 50px;	/*ヘッダーの高さ*/
+		position: relative;
+		background-color: #FFDDA1;
+		align-items: center;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ロゴ画像*/
+	header #logo img {
+		width: 146px;		/*画像の幅*/
+		position: absolute;z-index: 2;
+		left: 3%;		/*左から3%の場所に配置*/
+		top: 2px;		/*上から75pxの場所に配置*/
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	
+	}
+	/*ヘッダー右上の画像*/
+	#header-img img {
+		position: absolute;z-index: 1;
+		right: 3%;		/*右から3%の場所に配置*/
+		top: -30px;		/*上から-30pxの場所に配置。基準の場所から上に移動する事になります。*/
+		width: 500px;	/*画像の幅*/
+	}
+	
+	#contents {
+		clear: both;overflow: hidden;
+		padding-bottom: 9px;
+	}
+	
+	#main {
+		padding: 0 5%;
+	}
+	
+	#main h2 {
+		clear: both;
+		font-size: 13px;		/*文字サイズ*/
+		padding: 8px 30px;		/*上下、左右への余白*/
+		color: #333;			/*文字色*/
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: #FFF;		/*背景色（古いブラウザ用）*/
+		background: linear-gradient(#FFF, #e5e5e5);	/*背景グラデーション*/
+	}
+	
+	#main h3 {
+		clear: both;
+		margin-bottom: 20px;	/*見出しの下にとるスペース*/
+		font-size: 16px;		/*文字サイズ*/
+		padding: 10px 30px;		/*上下、左右への余白*/
+		color: #333;
+		border-radius: 10px;	/*角丸のサイズ*/
+		background: rgb(251, 134, 0);		/*背景色（古いブラウザ用）*/
+			/*背景グラデーション*/
+	}
+	
+	/*他。微調整。*/
+	#main p + p {
+		margin-top: -5px;
+	}
+	#main h2 + p,
+	#main h3 + p,
+	#main h4 + p {
+		margin-top: -10px;
+	}
+	#main section + section {
+		margin-top: 30px;
+	}
+	
+	iframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.blocka {
+		float: left;
+		width: 60%;
+	}
+	
+	.blockb {
+		float: right;
+		width: 40%;
+	}
+	
+	.primary-nav .a .main-link-area {
+		grid-area: main-lnks;
+		display: flex;
+		height: 100%;
+	}
+	
+	.about {
+		font-size: 20px;
+		text-align: right;
+		align-items: center;
+		right: 5%;
+		padding: 20px 30px;
+		padding-top: 10px;
+		color: rgb(24, 24, 24);
+	}
+	
+	
+	/*------------------------------------*/
+	.box1 {
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 5px;
+	}
+	p.box1 {
+		font-size: 2px;
+	}
+	
+	.main-content {
+		margin-right: auto;
+		margin-left: auto;
+		width: 86%;
+		height: auto;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+	}
+
+
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.container2 {
+		width: 40vw;
+		height: 21vh;
+		border: 0.3px solid rgb(199, 199, 199);
+		background-color: #FFFAF2;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(73, 73, 73, 0.5);
+		text-decoration: none;
+		margin-top: 5px;
+		margin-right: 1vw;
+		margin-left: 1vw;
+		margin-bottom: 0px;
+	}
+	.title {
+		text-align: center;
+		font-size: 12px;
+		margin-top: 2px;
+	}
+	
+	img.boxpic {
+		width: auto;
+		height: 13.5vh;
+		border-radius: 5px;
+	}
+}
+
+
+
+
+
+/*
+ヘッダーの大きさ
+文字長い
+レスポンシブ
+アバウトのページ
+*/
